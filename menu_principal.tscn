@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://imagenes sin fondo/menu.webp" type="Texture" id=1]
+[ext_resource path="res://imagenes sin fondo/lv1.png" type="Texture" id=2]
+[ext_resource path="res://menu_principal.gd" type="Script" id=3]
+
+[node name="menu_principal" type="Node"]
+script = ExtResource( 3 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+rect_scale = Vector2( 1.29, 1.35 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="nivel_1" type="TouchScreenButton" parent="."]
+position = Vector2( 413.091, 265.724 )
+scale = Vector2( 0.5, 0.5 )
+normal = ExtResource( 2 )
+pressed = ExtResource( 2 )
+[connection signal="pressed" from="nivel_1" to="." method="_on_nivel_1_pressed"]
